@@ -1,10 +1,13 @@
 public class Fila {
+
+    private Jogo[] filaJogo;
     private int trasSoma = 0;
     private int frenteSoma = 0;
     private int tamanho;
 
-    Fila(int _tamanho) {
-        
+    public Fila(int _tamanho) {
+        filaJogo = new Jogo[(_tamanho + 1)];
+        tamanho = (_tamanho + 1);
     }
 
     private int getTras() {
