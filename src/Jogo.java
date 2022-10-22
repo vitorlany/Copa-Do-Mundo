@@ -53,11 +53,14 @@ public class Jogo {
         Jogo clone = new Jogo(ano, etapa, dia, mes, selecao1, placarSelecao1, placarSelecao2, selecao2, local);
         return clone;
     }
+
     public void imprimir() {
         System.out.printf("[COPA " + ano +"] ["+ etapa +"] ["+ dia +"/"+ mes +"] ["+ selecao1 +" ("+ placarSelecao1 +") x ("+ placarSelecao2 +") " + ""+ selecao2 +"] ["+ local +"]\n");
     }
 
-
+    public int getGols() {
+        return this.placarSelecao1 + this.placarSelecao2;
+    }
 
 
 }
