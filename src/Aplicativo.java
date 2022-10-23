@@ -76,5 +76,15 @@ public class Aplicativo {
                 //System.out.println(e.getMessage());
             }
         }
+
+        for (int i = 0; i < filaJogos.getPreenchidos(); i++) {
+            try {
+                Jogo desenfilerado = filaJogos.removerFila();
+                System.out.printf("[" + i + "] ");
+                desenfilerado.imprimir();
+            } catch (Exception e) {
+
+            }
+        }
     }
 }

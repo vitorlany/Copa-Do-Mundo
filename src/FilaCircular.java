@@ -20,6 +20,10 @@ public class FilaCircular {
         return (frenteSoma % tamanho);
     }
 
+    public int getPreenchidos() {
+        return ( trasSoma - frenteSoma % tamanho);
+    }
+
     public boolean isVazia() {
         if (getFrente() == getTras()) {
             return true;
