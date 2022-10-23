@@ -67,8 +67,7 @@ public class FilaCircular {
 
     public double obterMediaGols() throws Exception {
         int quantidade = 0;
-        int soma = 0;
-        double media = (soma / quantidade);
+        double soma = 0;
         if (! isVazia()) {
             for (int i = frenteSoma; i < trasSoma; i++) {
                 int posicao = (i % tamanho);
@@ -79,6 +78,6 @@ public class FilaCircular {
         } else {
             throw new Exception("A fila está vazia!");
         }
-        return media;
+        return soma / quantidade;
     }
 }

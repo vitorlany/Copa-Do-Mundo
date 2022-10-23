@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Aplicativo {
     public static Jogo[] listaJogos = new Jogo[1000];
-    public static FilaCircular filaJogos = new FilaCircular(100);
+    public static FilaCircular filaJogos = new FilaCircular(500);
 
     public static void main(String[] args) {
         int jogoIndex = 0;
@@ -30,6 +30,7 @@ public class Aplicativo {
                 if (listaJogos[i].comparar(entrada)) {
                     try {
                         filaJogos.adicionarFila(listaJogos[i]);
+                        System.out.println( Math.round(filaJogos.obterMediaGols()) );
                         break;
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
@@ -49,10 +50,10 @@ public class Aplicativo {
                     case 'E':
                         String[] divideEntradas = entrada.split(" ");
                         for (int i = 0; ((i < listaJogos.length) && (listaJogos[i] != null)); i++) {
-                            if (listaJogos[i].comparar(entrada)) {
+                            if (listaJogos[i].comparar(divideEntradas[1])) {
                                 try {
                                     filaJogos.adicionarFila(listaJogos[i]);
-                                    System.out.println(Integer.valueOf(listaJogos[i].getGols()));
+                                    System.out.println( Math.round(filaJogos.obterMediaGols()) );
                                     break;
                                 } catch (Exception e) {
                                     filaJogos.removerFila();
