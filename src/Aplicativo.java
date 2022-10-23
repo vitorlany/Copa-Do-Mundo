@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Aplicativo {
     public static Jogo[] listaJogos = new Jogo[1000];
-    public static FilaCircular filaJogos = new FilaCircular(500);
+    public static FilaCircular filaJogos = new FilaCircular(100);
 
     public static void main(String[] args) {
         int jogoIndex = 0;
@@ -17,7 +17,7 @@ public class Aplicativo {
             }
             lerArquivo.close();
         } catch (Exception error) {
-            System.out.println(error.getMessage());
+            //System.out.println(error.getMessage());
         }
         lerEnfileiramento();
     }
@@ -33,7 +33,7 @@ public class Aplicativo {
                         System.out.println( Math.round(filaJogos.obterMediaGols()) );
                         break;
                     } catch (Exception e) {
-                        System.out.println(e.getMessage());
+                        //System.out.println(e.getMessage());
                     }
                 }
             }
@@ -73,7 +73,7 @@ public class Aplicativo {
                         break;
                 }
             } catch (Exception e) {
-                System.out.println(e.getMessage());
+                //System.out.println(e.getMessage());
             }
         }
     }
