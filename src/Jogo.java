@@ -42,7 +42,16 @@ public class Jogo {
 
     Jogo() {}
 
-    public boolean comparar(int _dia, int _mes, int _ano, String _selecao1) {
+    public boolean comparar(String entrada) {
+
+        String dados[] = entrada.split(";");
+        String datas[] = dados[0].split("/");
+
+        String _selecao1 = dados[1];
+        int _dia = Integer.parseInt(datas[0]);
+        int _mes = Integer.parseInt(datas[1]);
+        int _ano = Integer.parseInt(datas[2]);
+
         if ((_dia == dia) && (_mes == mes) && (_ano == ano) && (_selecao1.equals(selecao1))) {
             return true;
         }

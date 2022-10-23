@@ -43,7 +43,7 @@ public class FilaCircular {
         }
     }
 
-    public Jogo removerFila(Jogo obj) throws Exception {
+    public Jogo removerFila() throws Exception {
         if (! isVazia()) {
             Jogo desenfilerado = filaJogo[getFrente()];
             frenteSoma++;
