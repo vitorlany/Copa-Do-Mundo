@@ -52,6 +52,7 @@ public class Aplicativo {
                             if (listaJogos[i].comparar(entrada)) {
                                 try {
                                     filaJogos.adicionarFila(listaJogos[i]);
+                                    System.out.println(Integer.valueOf(listaJogos[i].getGols()));
                                     break;
                                 } catch (Exception e) {
                                     filaJogos.removerFila();
@@ -62,7 +63,9 @@ public class Aplicativo {
                         break;
 
                     case 'D':
-                        filaJogos.removerFila();
+                        Jogo desenfilerado = filaJogos.removerFila();
+                        System.out.printf("(D) ");
+                        desenfilerado.imprimir();
                         break;
 
                     default:
