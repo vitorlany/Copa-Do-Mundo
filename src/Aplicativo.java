@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Aplicativo {
     public static Jogo[] listaJogos = new Jogo[1000];
-    public static FilaCircular filaJogos = new FilaCircular(100);
+    public static FilaCircular filaJogos = new FilaCircular(350);
 
     public static void main(String[] args) {
         int jogoIndex = 0;
