@@ -30,7 +30,7 @@ public class Pilha {
 
     public void mostrar() throws Exception {
         if (! isVazia()) {
-            for (int i = (topo - 1); i >= 0; i--) {
+            for (int i = 0; i < topo; i++) {
                 System.out.printf("["+ i +"] ");
                 pilha[i].imprimir();
             }

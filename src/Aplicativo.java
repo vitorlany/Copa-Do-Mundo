@@ -65,7 +65,7 @@ public class Aplicativo {
                         System.out.println(e.getMessage());
                     }
                     break;
-                    
+
                 default:
                     break;
             }
