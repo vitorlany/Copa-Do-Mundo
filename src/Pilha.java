@@ -15,7 +15,7 @@ public class Pilha {
             pilha[topo] = novo;
             topo++;
         } else {
-            throw new Exception("A fila está cheia!");
+            throw new Exception("A pilha está cheia!");
         }
     }
 
@@ -24,17 +24,18 @@ public class Pilha {
             topo--;
             return pilha[topo];
         } else {
-            throw new Exception("A fila está vazia!");
+            throw new Exception("A pilha está vazia!");
         }
     }
 
     public void mostrar() throws Exception {
         if (! isVazia()) {
             for (int i = (topo - 1); i >= 0; i--) {
+                System.out.printf("["+ i +"] ");
                 pilha[i].imprimir();
             }
         } else {
-            throw new Exception("A fila está vazia!");
+            throw new Exception("A pilha está vazia!");
         }
     }
 

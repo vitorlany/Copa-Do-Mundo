@@ -52,8 +52,10 @@ public class Jogo {
         int _mes = Integer.parseInt(datas[1]);
         int _ano = Integer.parseInt(datas[2]);
 
-        if ((_dia == dia) && (_mes == mes) && (_ano == ano) && (_selecao1.equals(selecao1))) {
-            return true;
+        if (_selecao1.equals(selecao1)) {
+            if ((_dia == dia) && (_mes == mes) && (_ano == ano)) {
+                return true;
+            }
         }
         return false;
     }

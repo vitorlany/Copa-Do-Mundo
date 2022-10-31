@@ -20,15 +20,61 @@ public class Aplicativo {
     public static void main(String[] args) {
         gerarVetor();
 
-        Pilha pilha = new Pilha(1000);
+        Pilha pilha = new Pilha(1500);
+
+        Scanner scan = new Scanner(System.in);
+        String texto = scan.nextLine();
+        do {
+            for (int i = 0; ((i < listaJogos.length) && (listaJogos[i] != null)); i++) {
+                if (listaJogos[i].comparar(texto)) {
+                    try {
+                        pilha.empilhar(listaJogos[i]);
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                    }
+                }
+            }
+            texto = scan.nextLine();
+        } while (!texto.equals("FIM"));
+
+        String tamanho = scan.nextLine();
+
+        do {
+            String comando = scan.nextLine();
+            char tipo = comando.charAt(0);
+
+            switch (tipo) {
+                case 'E':
+                    String separar[] = comando.split(" ");
+                    for (int i = 0; ((i < listaJogos.length) && (listaJogos[i] != null)); i++) {
+                        if (listaJogos[i].comparar(separar[1])) {
+                            try {
+                                pilha.empilhar(listaJogos[i]);
+                            } catch (Exception e) {
+                                System.out.println(e.getMessage());
+                            }
+                        }
+                    }
+                    break;
+                case 'D':
+                    try {
+                        Jogo desempilhado = pilha.desempilhar();
+                        System.out.printf("(D) ");
+                        desempilhado.imprimir();
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                    }
+                    break;
+                    
+                default:
+                    break;
+            }
+        } while (scan.hasNextLine());
 
         try {
-            pilha.empilhar(listaJogos[5]);
             pilha.mostrar();
-            pilha.desempilhar();
-            pilha.mostrar();
-        } catch (Exception err){
-            System.out.println(err.getMessage());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 
