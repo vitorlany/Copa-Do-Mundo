@@ -71,5 +71,39 @@ public class Jogo {
         return this.placarSelecao1 + this.placarSelecao2;
     }
 
+    public int getAno() {
+        return ano;
+    }
 
+    public int getDia() {
+        return dia;
+    }
+
+    public int getMes() {
+        return mes;
+    }
+
+    public int getPlacarSelecao1() {
+        return placarSelecao1;
+    }
+
+    public int getPlacarSelecao2() {
+        return placarSelecao2;
+    }
+
+    public String getEtapa() {
+        return etapa;
+    }
+
+    public String getLocal() {
+        return local;
+    }
+
+    public String getSelecao1() {
+        return selecao1;
+    }
+
+    public String getSelecao2() {
+        return selecao2;
+    }
 }
